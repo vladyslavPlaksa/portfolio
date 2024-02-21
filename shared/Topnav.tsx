@@ -1,39 +1,20 @@
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@nextui-org/react';
+import { useState } from 'react';
 
 export default function Topnav() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
-        <Navbar shouldHideOnScroll isBordered>
-            <NavbarBrand>
-                {/* <AcmeLogo /> */}
-                <p className='font-bold text-inherit'>ACME</p>
-            </NavbarBrand>
-            <NavbarContent className='sm:flex gap-4' justify='center'>
-                <NavbarItem>
-                    <Link color='foreground' href='#'>
-                        Features
-                    </Link>
-                </NavbarItem>
-                <NavbarItem isActive>
-                    <Link href='#' aria-current='page'>
-                        Customers
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link color='foreground' href='#'>
-                        Integrations
-                    </Link>
-                </NavbarItem>
-            </NavbarContent>
-            <NavbarContent justify='end'>
-                <NavbarItem className='lg:flex'>
-                    <Link href='#'>Login</Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Button as={Link} color='primary' href='#' variant='flat'>
-                        Sign Up
-                    </Button>
-                </NavbarItem>
-            </NavbarContent>
-        </Navbar>
+        <nav className='p-3 border border-solid border-black'>
+            <button onClick={() => setIsMenuOpen(prev => !prev)}>Toggle Menu</button>
+
+            <div className={isMenuOpen ? 'flex' : 'hidden'}>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+        </nav>
     );
 }
