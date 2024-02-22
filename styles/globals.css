@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-nav {
-    border: 1px solid #000;
+:root {
+    --background: #0f0905;
+}
+
+html[class*='dark'] {
+    --background: #c2c2c2;
+}
+
+.link {
+    position: relative;
+    text-decoration: none;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--background);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
