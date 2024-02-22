@@ -36,6 +36,7 @@ module.exports = {
                 'plugin:jest-dom/recommended',
             ],
             rules: {
+                'no-console': 'warn',
                 'no-restricted-imports': [
                     'error',
                     {

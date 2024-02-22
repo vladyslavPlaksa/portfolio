@@ -1,5 +1,7 @@
 {
-    "marquee.widgets.npm-stats.packageNames": [
-        "portfolio"
-    ]
+  "marquee.widgets.npm-stats.packageNames": [
+    "portfolio"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

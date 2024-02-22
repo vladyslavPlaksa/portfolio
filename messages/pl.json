@@ -1,0 +1,19 @@
+{
+    "TopNav": {
+        "title": "Moja strona",
+        "links": {
+            "About": {
+                "title": "O mnie",
+                "url": "#about"
+            },
+            "Skills": {
+                "title": "Umiejętności",
+                "url": "#skills"
+            },
+            "Contact": {
+                "title": "Kontakt",
+                "url": "#contact"
+            }
+        }
+    }
+}
