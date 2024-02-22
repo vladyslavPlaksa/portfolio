@@ -3,7 +3,7 @@
         "title": "Moja strona",
         "links": {
             "About": {
-                "title": "Informacje o mnie",
+                "title": "O mnie",
                 "url": "#about"
             },
             "Skills": {
