@@ -3,6 +3,7 @@ import { GetServerSidePropsContext } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
+import AboutMe from '@/shared/Sections/About';
 import HeroSection from '@/shared/Sections/HeroSection';
 import Topnav from '@/shared/Topnav/Topnav';
 import ScrollToTop from '@/shared/utils/ScrollToTop';
@@ -26,6 +27,8 @@ export default function Home() {
                 <Topnav />
 
                 <HeroSection />
+
+                <AboutMe />
 
                 <ScrollToTop />
             </main>
