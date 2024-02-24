@@ -8,6 +8,9 @@ const config: Config = {
         './shared/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
+        fontFamily: {
+            michroma: ['Michroma', 'Mulish'],
+        },
         extend: {
             backgroundImage: {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -23,7 +26,7 @@ const config: Config = {
                 },
                 secondary: {
                     100: '#477EAE',
-                    500: '#719CC1',
+                    500: '#2691EE',
                 },
                 tertiary: '#0F0905',
             },
