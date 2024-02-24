@@ -25,7 +25,7 @@ export default function Topnav() {
 
     return (
         <nav
-            className={`flex min-h-[95px] w-full items-center justify-center px-10 py-5 text-xl sm:px-16 sm:py-5 ${isMenuOpen ? 'bg-primary-100 dark:bg-primary-900' : 'backdrop-blur-md'}`}
+            className={`flex min-h-[95px] w-full items-center justify-center px-10 py-5 text-xl sm:px-16 sm:py-5 ${isMenuOpen && 'bg-primary-100 dark:bg-primary-900'}`}
         >
             <div className='flex w-full justify-between sm:max-w-screen-sm lg:max-w-screen-xl '>
                 <div className='flex w-full items-center justify-between sm:justify-normal'>
