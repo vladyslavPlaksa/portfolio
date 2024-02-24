@@ -15,5 +15,9 @@
                 "url": "#contact"
             }
         }
+    },
+    "Hero": {
+        "title": "Witam",
+        "subtitle": "Nazywam się Vladyslav, jestem programistą"
     }
 }

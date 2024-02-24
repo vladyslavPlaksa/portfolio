@@ -1,14 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import { GetServerSidePropsContext } from 'next';
 import Head from 'next/head';
-import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
-import Button from '@/shared/Button';
+import HeroSection from '@/shared/HeroSection/HeroSection';
 import Topnav from '@/shared/Topnav/Topnav';
+import ScrollToTop from '@/shared/utils/ScrollToTop';
 
 export default function Home() {
-    const t = useTranslations('TopNav');
-
     return (
         <>
             <Head>
@@ -23,43 +22,12 @@ export default function Home() {
                 <link rel='mask-icon' href='/logo_dark.png' type='image/png' sizes='32x32' />
             </Head>
             <main style={{ height: '200vh' }} id='home'>
+                <Image src='/background.png' alt='Background' width={800} height={750} className='absolute left-0 top-10 -z-10' />
                 <Topnav />
-                <article>
-                    <p id='about' className='mt-10 scroll-mt-24'>
-                        ipsum dolor sit amet consectetur adipisicing elit. Eligendi nesciunt aperiam sapiente qui temporibus, quos vel enim id voluptates fugiat
-                        veniam pariatur, incidunt accusantium. Laboriosam eligendi numquam corrupti praesentium accusamus? Tempora numquam fuga voluptatibus
-                        fugit consequuntur totam eum praesentium reprehenderit, architecto quam inventore, suscipit, dicta natus a consequatur. Qui
-                        reprehenderit illum consectetur sit nemo ducimus ea unde voluptates facere eaque? Temporibus perferendis in libero autem ullam
-                        consequuntur cumque animi blanditiis velit pariatur voluptatibus, nihil excepturi quisquam facere deleniti, amet quam possimus quidem
-                        neque minus at dolores. Ea consectetur amet animi. Obcaecati voluptatibus distinctio rerum asperiores consequatur, atque, aut dicta
-                        incidunt molestias eos<Button>{t('links.About.title')}</Button> <Button>{t('links.Skills.title')}</Button>{' '}
-                        <Button>{t('links.Contact.title')}</Button> repellat est nobis sed! Ut laborum veniam consectetur sed vitae, nemo quibusdam temporibus
-                        obcaecati? Nulla soluta dignissimos sed quae veniam fugit earum dicta dolores laudantium ex! Repudiandae odio fugit facilis quae quia et
-                        rerum dignissimos ex eos. Incidunt enim, inventore necessitatibus laboriosam atque expedita!
-                    </p>
-                    <p id='skills' className='mt-10 scroll-mt-24'>
-                        Skills ipsum dolor sit amet consectetur adipisicing elit. Eligendi nesciunt aperiam sapiente qui temporibus, quos vel enim id voluptates
-                        fugiat veniam pariatur, incidunt accusantium. Laboriosam eligendi numquam corrupti praesentium accusamus? Tempora numquam fuga
-                        voluptatibus fugit consequuntur totam eum praesentium reprehenderit, architecto quam inventore, suscipit, dicta natus a consequatur. Qui
-                        reprehenderit illum consectetur sit nemo ducimus ea unde voluptates facere eaque? Temporibus perferendis in libero autem ullam
-                        consequuntur cumque animi blanditiis velit pariatur voluptatibus, nihil excepturi quisquam facere deleniti, amet quam possimus quidem
-                        neque minus at dolores. Ea consectetur amet animi. Obcaecati voluptatibus distinctio rerum asperiores consequatur, atque, aut dicta
-                        incidunt molestias eos blanditiis tenetur dolor. Atque repellat est nobis sed! Ut laborum veniam consectetur sed vitae, nemo quibusdam
-                        temporibus obcaecati? Nulla soluta dignissimos sed quae veniam fugit earum dicta dolores laudantium ex! Repudiandae odio fugit facilis
-                        quae quia et rerum dignissimos ex eos. Incidunt enim, inventore necessitatibus laboriosam atque expedita!
-                    </p>
-                    <p id='contact' className='mt-10 scroll-mt-24'>
-                        Contact ipsum dolor sit amet consectetur adipisicing elit. Eligendi nesciunt aperiam sapiente qui temporibus, quos vel enim id
-                        voluptates fugiat veniam pariatur, incidunt accusantium. Laboriosam eligendi numquam corrupti praesentium accusamus? Tempora numquam
-                        fuga voluptatibus fugit consequuntur totam eum praesentium reprehenderit, architecto quam inventore, suscipit, dicta natus a
-                        consequatur. Qui reprehenderit illum consectetur sit nemo ducimus ea unde voluptates facere eaque? Temporibus perferendis in libero
-                        autem ullam consequuntur cumque animi blanditiis velit pariatur voluptatibus, nihil excepturi quisquam facere deleniti, amet quam
-                        possimus quidem neque minus at dolores. Ea consectetur amet animi. Obcaecati voluptatibus distinctio rerum asperiores consequatur,
-                        atque, aut dicta incidunt molestias eos blanditiis tenetur dolor. Atque repellat est nobis sed! Ut laborum veniam consectetur sed vitae,
-                        nemo quibusdam temporibus obcaecati? Nulla soluta dignissimos sed quae veniam fugit earum dicta dolores laudantium ex! Repudiandae odio
-                        fugit facilis quae quia et rerum dignissimos ex eos. Incidunt enim, inventore necessitatibus laboriosam atque expedita!
-                    </p>
-                </article>
+
+                <HeroSection />
+
+                <ScrollToTop />
             </main>
         </>
     );
