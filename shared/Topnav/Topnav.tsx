@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
+import { smoothScroll } from '@/utils/smoothScrollTo';
+
 import LocaleSwitch from './LocaleSwitch';
 import ThemeSwitch from './ThemeSwitch';
 interface NavItem {
@@ -21,28 +23,22 @@ export default function Topnav() {
         { label: `${t(`links.Contact.title`)}`, href: `${t(`links.Contact.url`)}` },
     ];
 
-    const handleClick = (target: string, event: React.MouseEvent) => {
-        event.preventDefault();
-        document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
-        setIsMenuOpen(false); // Close the menu after clicking a navigation item
-    };
-
     return (
         <nav
-            className={`sticky top-0 flex w-full items-center justify-center border-b border-solid border-primary-500 px-10 py-5 text-lg dark:border-primary-100 ${isMenuOpen ? 'bg-primary-100 dark:bg-primary-900' : 'backdrop-blur-md'} sm:px-16 sm:py-5`}
+            className={`flex w-full items-center justify-center border-b border-solid border-primary-500 px-10 py-5 text-xl sm:border-b-0 dark:border-primary-100 ${isMenuOpen ? 'bg-primary-100 dark:bg-primary-900' : 'backdrop-blur-md'} sm:px-16 sm:py-5`}
         >
             <div className='flex w-full justify-between sm:max-w-screen-sm lg:max-w-screen-xl '>
                 <div className='flex w-full items-center justify-between sm:justify-normal'>
                     {/* Logo */}
-                    <Link href='#home' onClick={event => handleClick('#home', event)}>
-                        <Image src='/logo.png' alt='logo' width={50} height={50} className='mr-4 hidden dark:block' />
-                        <Image src='/logo_dark.png' alt='logo' width={50} height={50} className='mr-4 dark:hidden' />
+                    <Link href='#home' onClick={event => smoothScroll('#home', event)}>
+                        <Image src='/logo.png' alt='logo' width={70} height={50} className='mr-4 hidden dark:block' />
+                        <Image src='/logo_dark.png' alt='logo' width={70} height={50} className='mr-4 dark:hidden' />
                     </Link>
 
                     {/* Navigation Links */}
-                    <div className='hidden items-center justify-center sm:flex'>
+                    <div className='hidden h-full items-end justify-center sm:flex'>
                         {navConfig.map(navItem => (
-                            <Link href={navItem.href} key={navItem.href} className='link mx-2' onClick={event => handleClick(navItem.href, event)}>
+                            <Link href={navItem.href} key={navItem.href} className='link mx-2' onClick={event => smoothScroll(navItem.href, event)}>
                                 {navItem.label}
                             </Link>
                         ))}
@@ -53,43 +49,48 @@ export default function Topnav() {
                         <Image
                             src={`/icons/menu_dark.svg`}
                             alt='menu'
-                            width={30}
-                            height={30}
+                            width={40}
+                            height={40}
                             className={`${isMenuOpen && 'rotate-90 bg-primary-300'} rounded transition duration-300 ease-in-out dark:hidden`}
                         />
                         <Image
                             src={`/icons/menu.svg`}
                             alt='menu'
-                            width={30}
-                            height={30}
+                            width={40}
+                            height={40}
                             className={`${isMenuOpen && 'rotate-90 bg-primary-700'} hidden rounded transition duration-300 ease-in-out dark:block`}
                         />
                     </button>
                 </div>
 
                 {/* Change Theme and Language */}
-                <div className='hidden items-center gap-2 sm:flex'>
+                <div className='hidden items-end gap-2 sm:flex'>
                     <ThemeSwitch />
                     <LocaleSwitch />
                 </div>
-
-                {/* Dropdown menu */}
-                <div
-                    className={`transition-max-height absolute left-0 top-full border-t border-solid border-primary-500 duration-300 ease-in-out sm:hidden dark:border-primary-100 ${isMenuOpen ? 'h-screen' : 'h-0 overflow-hidden'} w-full bg-primary-100 dark:bg-primary-900`}
-                >
-                    <ul className='mt-3'>
-                        {navConfig.map(navItem => (
-                            <li key={navItem.href} className='text-xl'>
-                                <Link href={navItem.href} onClick={event => handleClick(navItem.href, event)}>
-                                    <span className='block px-4 py-2 hover:bg-primary-300 dark:hover:bg-primary-700'>{navItem.label}</span>
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                    <div className='ml-3 mt-4 flex w-32 items-center justify-between gap-2'>
-                        <ThemeSwitch isMobile={true} />
-                        <LocaleSwitch />
-                    </div>
+            </div>
+            {/* Dropdown menu */}
+            <div
+                className={`transition-max-height absolute left-0 top-full border-t border-solid border-primary-500 duration-300 ease-in-out sm:hidden dark:border-primary-100 ${isMenuOpen ? 'h-screen' : 'h-0 overflow-hidden'} w-full bg-primary-100 dark:bg-primary-900`}
+            >
+                <ul className='mt-3'>
+                    {navConfig.map(navItem => (
+                        <li key={navItem.href} className='text-xl'>
+                            <Link
+                                href={navItem.href}
+                                onClick={event => {
+                                    smoothScroll(navItem.href, event);
+                                    setIsMenuOpen(false);
+                                }}
+                            >
+                                <span className='block px-4 py-2 hover:bg-primary-300 dark:hover:bg-primary-700'>{navItem.label}</span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+                <div className='ml-3 mt-4 flex w-32 items-center justify-between gap-2'>
+                    <ThemeSwitch isMobile={true} />
+                    <LocaleSwitch />
                 </div>
             </div>
         </nav>
