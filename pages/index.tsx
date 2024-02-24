@@ -3,7 +3,7 @@ import { GetServerSidePropsContext } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
-import HeroSection from '@/shared/HeroSection/HeroSection';
+import HeroSection from '@/shared/Sections/HeroSection';
 import Topnav from '@/shared/Topnav/Topnav';
 import ScrollToTop from '@/shared/utils/ScrollToTop';
 
