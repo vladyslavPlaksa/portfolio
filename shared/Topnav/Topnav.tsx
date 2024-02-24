@@ -25,7 +25,7 @@ export default function Topnav() {
 
     return (
         <nav
-            className={`flex w-full items-center justify-center border-b border-solid border-primary-500 px-10 py-5 text-xl sm:border-b-0 dark:border-primary-100 ${isMenuOpen ? 'bg-primary-100 dark:bg-primary-900' : 'backdrop-blur-md'} sm:px-16 sm:py-5`}
+            className={`flex min-h-[95px] w-full items-center justify-center px-10 py-5 text-xl sm:px-16 sm:py-5 ${isMenuOpen ? 'bg-primary-100 dark:bg-primary-900' : 'backdrop-blur-md'}`}
         >
             <div className='flex w-full justify-between sm:max-w-screen-sm lg:max-w-screen-xl '>
                 <div className='flex w-full items-center justify-between sm:justify-normal'>
@@ -71,7 +71,7 @@ export default function Topnav() {
             </div>
             {/* Dropdown menu */}
             <div
-                className={`transition-max-height absolute left-0 top-full border-t border-solid border-primary-500 duration-300 ease-in-out sm:hidden dark:border-primary-100 ${isMenuOpen ? 'h-screen' : 'h-0 overflow-hidden'} w-full bg-primary-100 dark:bg-primary-900`}
+                className={`absolut transition-max-height absolute left-0 top-[95px] w-full bg-primary-100 duration-300  ease-in-out sm:hidden dark:bg-primary-900 ${isMenuOpen ? 'h-screen' : 'h-0 overflow-hidden'}`}
             >
                 <ul className='mt-3'>
                     {navConfig.map(navItem => (
