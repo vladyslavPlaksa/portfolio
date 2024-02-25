@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 import AboutMe from '@/shared/Sections/About';
 import HeroSection from '@/shared/Sections/HeroSection';
+import Skills from '@/shared/Sections/Skills';
 import Topnav from '@/shared/Topnav/Topnav';
 import ScrollToTop from '@/shared/utils/ScrollToTop';
 
@@ -22,13 +23,15 @@ export default function Home() {
                 <link rel='icon' href='/logo_dark.png' type='image/png' sizes='32x32' />
                 <link rel='mask-icon' href='/logo_dark.png' type='image/png' sizes='32x32' />
             </Head>
-            <main style={{ height: '200vh' }} id='home'>
+            <main style={{ minHeight: '250vh' }} id='home'>
                 <Image src='/background.png' alt='Background' width={800} height={750} className='absolute left-0 top-10 -z-10' />
                 <Topnav />
 
                 <HeroSection />
 
                 <AboutMe />
+
+                <Skills />
 
                 <ScrollToTop />
             </main>

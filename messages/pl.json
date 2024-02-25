@@ -23,5 +23,8 @@
     "About": {
         "title": "O mnie",
         "text": "Jestem oddanym i zdeterminowanym inżynierem oprogramowania, specjalizuję się w różnych technologiach. Z pasją do technologii i nieustannym dążeniem do doskonałości, konsekwentnie dążę do rozszerzenia swojej wiedzy programistycznej i pozostania na czele trendów branżowych. Moja podróż w rozwoju oprogramowania charakteryzuje się silną etyką pracy, wyjątkowymi umiejętnościami komunikacyjnymi i niezachwianym zaangażowaniem w sukces. Wyposażony w wrodzoną zdolność do adaptacji do nowych wyzwań, dostarczaniu innowacyjnych rozwiązań, które przewyższają oczekiwania."
+    },
+    "Skills": {
+        "title": "Umiejętności"
     }
 }

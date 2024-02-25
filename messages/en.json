@@ -23,5 +23,8 @@
     "About": {
         "title": "About me",
         "text": "I am a dedicated and driven software engineer, I specialize in a range of technologies. With a fervent passion for technology and a relentless pursuit of excellence, I consistently strive to expand my programming prowess and stay at the forefront of industry trends. My journey in software development is characterized by a strong work ethic, exceptional communication skills, and an unwavering commitment to success. Equipped with an innate ability to adapt to new challenges, delivering innovative solutions that exceed expectations."
+    },
+    "Skills": {
+        "title": "Skills"
     }
 }
