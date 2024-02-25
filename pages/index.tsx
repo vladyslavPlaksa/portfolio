@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import AboutMe from '@/shared/Sections/About';
+import Contact from '@/shared/Sections/Contact';
 import HeroSection from '@/shared/Sections/HeroSection';
 import Projects from '@/shared/Sections/Projects';
 import Skills from '@/shared/Sections/Skills';
@@ -39,6 +40,8 @@ export default function Home() {
                 <WorkExperience />
 
                 <Projects />
+
+                <Contact />
 
                 <ScrollToTop />
             </main>

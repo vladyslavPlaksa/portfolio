@@ -102,5 +102,26 @@
                 }
             }
         }
+    },
+    "Contact": {
+        "title": "Skontaktu zemną",
+        "links": {
+            "github": {
+                "title": "Idź do mojego GitHub",
+                "href": "https://github.com/vladyslavPlaksa",
+                "alt": "GitHub"
+            },
+            "linkedin": {
+                "title": "Idź do mojego LinkedIn",
+                "href": "https://www.linkedin.com/in/vladyslav-plaksa-071b20238/",
+                "alt": "LinkedIn"
+            },
+            "email": {
+                "title": "Napisz do mnie e-mail",
+                "href": "mailto:vladyslavplaksa@gmail.com",
+                "alt": "Email me",
+                "icon": "envelope"
+            }
+        }
     }
 }
