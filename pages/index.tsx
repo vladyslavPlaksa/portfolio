@@ -28,8 +28,23 @@ export default function Home() {
                 <link rel='mask-icon' href='/logo_dark.png' type='image/png' sizes='32x32' />
             </Head>
             <main className='relative' id='home'>
-                <Image src='/background.png' alt='Background' width={800} height={750} className='absolute left-0 top-10 -z-10' />
-                <Image src='/background.png' alt='Background' width={800} height={750} className='absolute bottom-0 right-0 -z-10 rotate-180' />
+                <Image
+                    src='/background.svg'
+                    alt='Background'
+                    width={800}
+                    height={750}
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw'
+                    loading='eager'
+                    className='absolute left-0 top-10 -z-10'
+                />
+                <Image
+                    src='/background.svg'
+                    alt='Background'
+                    width={800}
+                    height={750}
+                    sizes='(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw'
+                    className='absolute bottom-0 right-0 -z-10 rotate-180'
+                />
                 <Topnav />
 
                 <HeroSection />

@@ -34,12 +34,12 @@ export default function Projects() {
 
     return (
         <div className='px-10 pt-[100px] sm:px-16 md:px-20 lg:px-28' id='projects'>
-            <h3 className='text-secondary-pink dark:text-secondary-green font-michroma text-2xl sm:text-3xl md:text-4xl'>{t('title')}</h3>
+            <h2 className='font-michroma text-2xl text-secondary-pink sm:text-3xl md:text-4xl dark:text-secondary-green'>{t('title')}</h2>
             <div className='flex flex-col gap-x-3 gap-y-2.5 pt-5 lg:flex-row'>
                 {projectsConfig.map(project => (
                     <div className='flex max-w-[500px] flex-col border border-solid border-primary-900 dark:border-primary-300' key={project.title}>
                         <div className='flex flex-row items-center justify-between border-b border-solid border-primary-900 px-4 py-3 dark:border-primary-300'>
-                            <h3 className='text-secondary-pink dark:text-secondary-green font-michroma text-2xl'>{project.title}</h3>
+                            <h3 className='font-michroma text-2xl text-secondary-pink dark:text-secondary-green'>{project.title}</h3>
                             <span className='flex flex-row gap-2'>
                                 <Link href={project.links.github} target='_blank'>
                                     <Image src='/icons/github_dark.svg' alt='Github' width={30} height={30} className='dark:hidden' />

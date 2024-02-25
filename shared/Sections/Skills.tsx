@@ -30,7 +30,7 @@ export default function Skills() {
     const t = useTranslations('Skills');
     return (
         <div className='px-10 pt-[100px] sm:px-16 md:px-20 lg:px-28' id='skills'>
-            <h3 className='text-secondary-pink dark:text-secondary-green font-michroma text-2xl sm:text-3xl md:text-4xl'>{t(`title`)}</h3>
+            <h2 className='font-michroma text-2xl text-secondary-pink sm:text-3xl md:text-4xl dark:text-secondary-green'>{t(`title`)}</h2>
             <div className='flex flex-wrap gap-x-3 gap-y-2.5 pt-5'>
                 {skillsConfig.map(skill => (
                     <Button key={skill.name}>{skill.name}</Button>

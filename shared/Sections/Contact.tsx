@@ -26,7 +26,7 @@ export default function Contact() {
     ];
     return (
         <div className='px-10 pt-[100px] sm:px-16 md:px-20 lg:px-28' id='contact'>
-            <h3 className='text-secondary-pink dark:text-secondary-green font-michroma text-2xl sm:text-3xl md:text-4xl'>{t('title')}</h3>
+            <h2 className='font-michroma text-2xl text-secondary-pink sm:text-3xl md:text-4xl dark:text-secondary-green'>{t('title')}</h2>
             <div className='flex flex-col gap-y-3 pt-7'>
                 {contactConfig.map(item => (
                     <div className='flex w-max items-center justify-between gap-5' key={item.alt}>

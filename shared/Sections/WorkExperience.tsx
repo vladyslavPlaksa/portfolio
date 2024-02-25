@@ -33,7 +33,7 @@ export default function WorkExperience() {
 
     return (
         <div className='px-10 pt-[100px] sm:px-16 md:px-20 lg:px-28' id='work'>
-            <h3 className='text-secondary-pink dark:text-secondary-green font-michroma text-2xl sm:text-3xl md:text-4xl'>{t('title')}</h3>
+            <h2 className='font-michroma text-2xl text-secondary-pink sm:text-3xl md:text-4xl dark:text-secondary-green'>{t('title')}</h2>
             {workExperienceConfig.map(work => (
                 <div key={work.title} className='flex flex-col gap-x-7 gap-y-1 pb-3 pl-5 pt-5 md:flex-row'>
                     <p className='w-48 text-lg sm:text-xl'>{work.date}</p>
