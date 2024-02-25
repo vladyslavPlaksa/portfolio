@@ -10,6 +10,14 @@
                 "title": "Umiejętności",
                 "url": "#skills"
             },
+            "Work": {
+                "title": "Doświadczenie",
+                "url": "#work"
+            },
+            "Projects": {
+                "title": "Projekty",
+                "url": "#projects"
+            },
             "Contact": {
                 "title": "Kontakt",
                 "url": "#contact"
@@ -19,5 +27,101 @@
     "Hero": {
         "title": "Witam",
         "subtitle": "Nazywam się Vladyslav, jestem programistą"
+    },
+    "About": {
+        "title": "O mnie",
+        "text": "Jestem oddanym i zdeterminowanym inżynierem oprogramowania, specjalizuję się w różnych technologiach. Z pasją do technologii i nieustannym dążeniem do doskonałości, konsekwentnie dążę do rozszerzenia swojej wiedzy programistycznej i pozostania na czele trendów branżowych. Moja podróż w rozwoju oprogramowania charakteryzuje się silną etyką pracy, wyjątkowymi umiejętnościami komunikacyjnymi i niezachwianym zaangażowaniem w sukces. Wyposażony w wrodzoną zdolność do adaptacji do nowych wyzwań, dostarczaniu innowacyjnych rozwiązań, które przewyższają oczekiwania."
+    },
+    "Skills": {
+        "title": "Umiejętności"
+    },
+    "Work": {
+        "title": "Doświadczenie zawodowe",
+        "jobs": {
+            "heyHomie": {
+                "title": "HeyHomie - Next.js Developer",
+                "date": "Maj 2023 – Teraz",
+                "description": {
+                    "1": "Tworzenie nowych funkcjonalności i modyfikowanie już istniejących",
+                    "2": "Zarządzaj rozwojem front-endu, co obejmuje wyszukiwanie projektantów, dostosowywanie istniejących projektów i komunikację z programistami back-end"
+                },
+                "technologies": {
+                    "1": "Next.js",
+                    "2": "Tailwind",
+                    "3": "Docker",
+                    "4": "Stripe"
+                }
+            },
+            "myEventeo": {
+                "title": "MyEventeo - Internship Software Developer",
+                "date": "Lis 2022 - Gru 2022",
+                "description": {
+                    "1": "Zdobyte doświadczenie w pracy zespołowej",
+                    "2": "Zakończono wszelkie przygotowania i realizację projektu",
+                    "3": "Poznałem i wdrożyłem nowe technologie wymagane w tym projekcie, takie jak Firebase i Algolia"
+                },
+                "technologies": {
+                    "1": "React",
+                    "2": "Tailwind",
+                    "3": "Stripe",
+                    "4": "Firebase",
+                    "5": "Algolia"
+                }
+            }
+        }
+    },
+    "Projects": {
+        "title": "Projekty",
+        "projects": {
+            "phanex": {
+                "title": "Phanex",
+                "description": "Przedstawiamy Phanex, Twoje ulubione miejsce, w którym znajdziesz najwyższej jakości akcesoria muzyczne. Koncentrując się na jakości i innowacjach, oferujemy wyselekcjonowany wybór słuchawek i głośników.",
+                "technologies": {
+                    "1": "Next.js",
+                    "2": "Stripe",
+                    "3": "Sanity",
+                    "4": "Canvas-confetti"
+                },
+                "links": {
+                    "github": "https://github.com/vladyslavPlaksa/ecommerce_app",
+                    "site": "http://ecommerce-app-eta.vercel.app/"
+                }
+            },
+            "graphCML": {
+                "title": "GraphCML",
+                "description": "Przedstawiamy blog GraphCML, najważniejsze miejsce, w którym znajdziesz wnikliwe treści i wciągające lektury. Zapewniamy płynne przeglądanie dzięki szybko ładującym się stronom. Bądź na bieżąco z najnowszymi postami dzięki aktualizacjom w czasie rzeczywistym i intuicyjnej nawigacji.",
+                "technologies": {
+                    "1": "Next.js",
+                    "2": "Graphql",
+                    "3": "Moment",
+                    "4": "Sass"
+                },
+                "links": {
+                    "github": "https://github.com/vladyslavPlaksa/blog_app",
+                    "site": "http://blog-app-eosin-zeta.vercel.app/"
+                }
+            }
+        }
+    },
+    "Contact": {
+        "title": "Skontaktu zemną",
+        "links": {
+            "github": {
+                "title": "Idź do mojego GitHub",
+                "href": "https://github.com/vladyslavPlaksa",
+                "alt": "GitHub"
+            },
+            "linkedin": {
+                "title": "Idź do mojego LinkedIn",
+                "href": "https://www.linkedin.com/in/vladyslav-plaksa-071b20238/",
+                "alt": "LinkedIn"
+            },
+            "email": {
+                "title": "Napisz do mnie e-mail",
+                "href": "mailto:vladyslavplaksa@gmail.com",
+                "alt": "Email me",
+                "icon": "envelope"
+            }
+        }
     }
 }

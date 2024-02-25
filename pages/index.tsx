@@ -3,7 +3,13 @@ import { GetServerSidePropsContext } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
-import HeroSection from '@/shared/HeroSection/HeroSection';
+import AboutMe from '@/shared/Sections/About';
+import Contact from '@/shared/Sections/Contact';
+import Footer from '@/shared/Sections/Footer';
+import HeroSection from '@/shared/Sections/HeroSection';
+import Projects from '@/shared/Sections/Projects';
+import Skills from '@/shared/Sections/Skills';
+import WorkExperience from '@/shared/Sections/WorkExperience';
 import Topnav from '@/shared/Topnav/Topnav';
 import ScrollToTop from '@/shared/utils/ScrollToTop';
 
@@ -21,11 +27,24 @@ export default function Home() {
                 <link rel='icon' href='/logo_dark.png' type='image/png' sizes='32x32' />
                 <link rel='mask-icon' href='/logo_dark.png' type='image/png' sizes='32x32' />
             </Head>
-            <main style={{ height: '200vh' }} id='home'>
+            <main className='relative' id='home'>
                 <Image src='/background.png' alt='Background' width={800} height={750} className='absolute left-0 top-10 -z-10' />
+                <Image src='/background.png' alt='Background' width={800} height={750} className='absolute bottom-0 right-0 -z-10 rotate-180' />
                 <Topnav />
 
                 <HeroSection />
+
+                <AboutMe />
+
+                <Skills />
+
+                <WorkExperience />
+
+                <Projects />
+
+                <Contact />
+
+                <Footer />
 
                 <ScrollToTop />
             </main>

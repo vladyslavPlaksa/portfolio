@@ -25,8 +25,8 @@ const config: Config = {
                     900: '#1F1F1F',
                 },
                 secondary: {
-                    100: '#477EAE',
-                    500: '#2691EE',
+                    green: '#09C627',
+                    pink: '#BF1DC2',
                 },
                 tertiary: '#0F0905',
             },

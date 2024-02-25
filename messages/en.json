@@ -10,6 +10,14 @@
                 "title": "Skills",
                 "url": "#skills"
             },
+            "Work": {
+                "title": "Work Experience",
+                "url": "#work"
+            },
+            "Projects": {
+                "title": "Projects",
+                "url": "#projects"
+            },
             "Contact": {
                 "title": "Contact",
                 "url": "#contact"
@@ -19,5 +27,101 @@
     "Hero": {
         "title": "Hello",
         "subtitle": "I'm Vladyslav and I'm a software developer"
+    },
+    "About": {
+        "title": "About me",
+        "text": "I am a dedicated and driven software engineer, I specialize in a range of technologies. With a fervent passion for technology and a relentless pursuit of excellence, I consistently strive to expand my programming prowess and stay at the forefront of industry trends. My journey in software development is characterized by a strong work ethic, exceptional communication skills, and an unwavering commitment to success. Equipped with an innate ability to adapt to new challenges, delivering innovative solutions that exceed expectations."
+    },
+    "Skills": {
+        "title": "Skills"
+    },
+    "Work": {
+        "title": "Work Experience",
+        "jobs": {
+            "heyHomie": {
+                "title": "HeyHomie - Next.js Developer",
+                "date": "May 2023 - Now",
+                "description": {
+                    "1": "Developing new features and modifying existing one",
+                    "2": "Manage front-end development, which includes finding designers, adjusting existing designs, and communicating with back-end developers"
+                },
+                "technologies": {
+                    "1": "Next.js",
+                    "2": "Tailwind",
+                    "3": "Docker",
+                    "4": "Stripe"
+                }
+            },
+            "myEventeo": {
+                "title": "MyEventeo - Internship Software Developer",
+                "date": "Nov 2022 - Dec 2022",
+                "description": {
+                    "1": "Gained teamwork experience",
+                    "2": "Completed all preparation and implementation of the project",
+                    "3": "Learned and implemented new technologies required by this project such as Firebase and Algola"
+                },
+                "technologies": {
+                    "1": "React",
+                    "2": "Tailwind",
+                    "3": "Stripe",
+                    "4": "Firebase",
+                    "5": "Algolia"
+                }
+            }
+        }
+    },
+    "Projects": {
+        "title": "Projects",
+        "projects": {
+            "phanex": {
+                "title": "Phanex",
+                "description": "Introducing Phanex, your go-to destination for premium musical accessories. With a focus on quality and innovation, we offer a curated selection of headphones and speakers",
+                "technologies": {
+                    "1": "Next.js",
+                    "2": "Stripe",
+                    "3": "Sanity",
+                    "4": "Canvas-confetti"
+                },
+                "links": {
+                    "github": "https://github.com/vladyslavPlaksa/ecommerce_app",
+                    "site": "http://ecommerce-app-eta.vercel.app/"
+                }
+            },
+            "graphCML": {
+                "title": "GraphCML",
+                "description": "Introducing GraphCML Blog, your premier destination for insightful content and engaging reads. We deliver a seamless browsing experience with fast-loading pages. Stay up-to-date with the latest posts thanks to real-time updates and intuitive navigation.",
+                "technologies": {
+                    "1": "Next.js",
+                    "2": "Graphql",
+                    "3": "Moment",
+                    "4": "Sass"
+                },
+                "links": {
+                    "github": "https://github.com/vladyslavPlaksa/blog_app",
+                    "site": "http://blog-app-eosin-zeta.vercel.app/"
+                }
+            }
+        }
+    },
+    "Contact": {
+        "title": "Contact me",
+        "links": {
+            "github": {
+                "title": "Go to my GitHub",
+                "href": "https://github.com/vladyslavPlaksa",
+                "alt": "GitHub"
+            },
+            "linkedin": {
+                "title": "Go to my LinkedIn",
+                "href": "https://www.linkedin.com/in/vladyslav-plaksa-071b20238/",
+                "alt": "LinkedIn"
+            },
+            "email": {
+                "title": "Write me an email",
+                "href": "mailto:vladyslavplaksa@gmail.com",
+                "alt": "Email me",
+                "icon": "envelope"
+            }
+        }
     }
 }
