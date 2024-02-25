@@ -19,7 +19,7 @@ export default function Topnav() {
     const navConfig: NavItem[] = [
         // { label: 'Home', href: '#home' },
         { label: `${t(`links.About.title`)}`, href: `${t(`links.About.url`)}` },
-        { label: `${t(`links.Skills.title`)}`, href: `${t(`links.Skills.url`)}` },
+        { label: `${t(`links.Work.title`)}`, href: `${t(`links.Work.url`)}` },
         { label: `${t(`links.Contact.title`)}`, href: `${t(`links.Contact.url`)}` },
     ];
 
