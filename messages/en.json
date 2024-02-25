@@ -26,5 +26,40 @@
     },
     "Skills": {
         "title": "Skills"
+    },
+    "Work": {
+        "title": "Work Experience",
+        "jobs": {
+            "heyHomie": {
+                "title": "HeyHomie - Next.js Developer",
+                "date": "May 2023 - Now",
+                "description": {
+                    "1": "Developing new features and modifying existing one",
+                    "2": "Manage front-end development, which includes finding designers, adjusting existing designs, and communicating with back-end developers"
+                },
+                "technologies": {
+                    "1": "Next.js",
+                    "2": "Tailwind",
+                    "3": "Docker",
+                    "4": "Stripe"
+                }
+            },
+            "myEventeo": {
+                "title": "MyEventeo - Internship Software Developer",
+                "date": "Nov 2022 - Dec 2022",
+                "description": {
+                    "1": "Gained teamwork experience",
+                    "2": "Completed all preparation and implementation of the project",
+                    "3": "Learned and implemented new technologies required by this project such as Firebase and Algola"
+                },
+                "technologies": {
+                    "1": "React",
+                    "2": "Tailwind",
+                    "3": "Stripe",
+                    "4": "Firebase",
+                    "5": "Algolia"
+                }
+            }
+        }
     }
 }
