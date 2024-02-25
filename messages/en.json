@@ -10,6 +10,14 @@
                 "title": "Skills",
                 "url": "#skills"
             },
+            "Work": {
+                "title": "Work Experience",
+                "url": "#work"
+            },
+            "Projects": {
+                "title": "Projects",
+                "url": "#projects"
+            },
             "Contact": {
                 "title": "Contact",
                 "url": "#contact"
@@ -58,6 +66,39 @@
                     "3": "Stripe",
                     "4": "Firebase",
                     "5": "Algolia"
+                }
+            }
+        }
+    },
+    "Projects": {
+        "title": "Projects",
+        "projects": {
+            "phanex": {
+                "title": "Phanex",
+                "description": "Introducing Phanex, your go-to destination for premium musical accessories. With a focus on quality and innovation, we offer a curated selection of headphones and speakers",
+                "technologies": {
+                    "1": "Next.js",
+                    "2": "Stripe",
+                    "3": "Sanity",
+                    "4": "Canvas-confetti"
+                },
+                "links": {
+                    "github": "https://github.com/vladyslavPlaksa/ecommerce_app",
+                    "site": "http://ecommerce-app-eta.vercel.app/"
+                }
+            },
+            "graphCML": {
+                "title": "GraphCML",
+                "description": "Introducing GraphCML Blog, your premier destination for insightful content and engaging reads. We deliver a seamless browsing experience with fast-loading pages. Stay up-to-date with the latest posts thanks to real-time updates and intuitive navigation.",
+                "technologies": {
+                    "1": "Next.js",
+                    "2": "Graphql",
+                    "3": "Moment",
+                    "4": "Sass"
+                },
+                "links": {
+                    "github": "https://github.com/vladyslavPlaksa/blog_app",
+                    "site": "http://blog-app-eosin-zeta.vercel.app/"
                 }
             }
         }

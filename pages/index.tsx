@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 import AboutMe from '@/shared/Sections/About';
 import HeroSection from '@/shared/Sections/HeroSection';
+import Projects from '@/shared/Sections/Projects';
 import Skills from '@/shared/Sections/Skills';
 import WorkExperience from '@/shared/Sections/WorkExperience';
 import Topnav from '@/shared/Topnav/Topnav';
@@ -35,6 +36,8 @@ export default function Home() {
                 <Skills />
 
                 <WorkExperience />
+
+                <Projects />
 
                 <ScrollToTop />
             </main>

@@ -10,6 +10,14 @@
                 "title": "Umiejętności",
                 "url": "#skills"
             },
+            "Work": {
+                "title": "Doświadczenie",
+                "url": "#work"
+            },
+            "Projects": {
+                "title": "Projekty",
+                "url": "#projects"
+            },
             "Contact": {
                 "title": "Kontakt",
                 "url": "#contact"
@@ -58,6 +66,39 @@
                     "3": "Stripe",
                     "4": "Firebase",
                     "5": "Algolia"
+                }
+            }
+        }
+    },
+    "Projects": {
+        "title": "Projekty",
+        "projects": {
+            "phanex": {
+                "title": "Phanex",
+                "description": "Przedstawiamy Phanex, Twoje ulubione miejsce, w którym znajdziesz najwyższej jakości akcesoria muzyczne. Koncentrując się na jakości i innowacjach, oferujemy wyselekcjonowany wybór słuchawek i głośników.",
+                "technologies": {
+                    "1": "Next.js",
+                    "2": "Stripe",
+                    "3": "Sanity",
+                    "4": "Canvas-confetti"
+                },
+                "links": {
+                    "github": "https://github.com/vladyslavPlaksa/ecommerce_app",
+                    "site": "http://ecommerce-app-eta.vercel.app/"
+                }
+            },
+            "graphCML": {
+                "title": "GraphCML",
+                "description": "Przedstawiamy blog GraphCML, najważniejsze miejsce, w którym znajdziesz wnikliwe treści i wciągające lektury. Zapewniamy płynne przeglądanie dzięki szybko ładującym się stronom. Bądź na bieżąco z najnowszymi postami dzięki aktualizacjom w czasie rzeczywistym i intuicyjnej nawigacji.",
+                "technologies": {
+                    "1": "Next.js",
+                    "2": "Graphql",
+                    "3": "Moment",
+                    "4": "Sass"
+                },
+                "links": {
+                    "github": "https://github.com/vladyslavPlaksa/blog_app",
+                    "site": "http://blog-app-eosin-zeta.vercel.app/"
                 }
             }
         }
