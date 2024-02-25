@@ -47,14 +47,6 @@ export default function ThemeSwitch({ isMobile = false }) {
         );
     }
 
-    // if (resolvedTheme === 'dark') {
-    //     return <Image src='/icons/sun.svg' onClick={() => setTheme('light')} width={25} height={25} alt='Switch to light mode' />;
-    // }
-
-    // if (resolvedTheme === 'light') {
-    //     return <Image src='/icons/moon_dark.svg' onClick={() => setTheme('dark')} width={25} height={25} alt='Switch to dark mode' />;
-    // }
-
     return (
         <>
             <Image
