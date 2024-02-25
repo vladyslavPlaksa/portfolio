@@ -25,8 +25,9 @@ export default function Home() {
                 <link rel='icon' href='/logo_dark.png' type='image/png' sizes='32x32' />
                 <link rel='mask-icon' href='/logo_dark.png' type='image/png' sizes='32x32' />
             </Head>
-            <main style={{ paddingBottom: '200px' }} id='home'>
+            <main style={{ paddingBottom: '200px' }} className='relative' id='home'>
                 <Image src='/background.png' alt='Background' width={800} height={750} className='absolute left-0 top-10 -z-10' />
+                <Image src='/background.png' alt='Background' width={800} height={750} className='absolute bottom-0 right-0 -z-10 rotate-180' />
                 <Topnav />
 
                 <HeroSection />
