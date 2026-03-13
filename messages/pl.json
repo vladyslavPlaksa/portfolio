@@ -11,7 +11,7 @@
                 "url": "#skills"
             },
             "Work": {
-                "title": "Doświadczenie",
+                "title": "Doświadczenie zawodowe",
                 "url": "#work"
             },
             "Projects": {
@@ -25,12 +25,12 @@
         }
     },
     "Hero": {
-        "title": "Witam",
-        "subtitle": "Nazywam się Vladyslav, jestem programistą"
+        "title": "Cześć",
+        "subtitle": "Jestem Vladyslav i pracuję jako DevOps Engineer"
     },
     "About": {
         "title": "O mnie",
-        "text": "Jestem oddanym i zdeterminowanym inżynierem oprogramowania, specjalizuję się w różnych technologiach. Z pasją do technologii i nieustannym dążeniem do doskonałości, konsekwentnie dążę do rozszerzenia swojej wiedzy programistycznej i pozostania na czele trendów branżowych. Moja podróż w rozwoju oprogramowania charakteryzuje się silną etyką pracy, wyjątkowymi umiejętnościami komunikacyjnymi i niezachwianym zaangażowaniem w sukces. Wyposażony w wrodzoną zdolność do adaptacji do nowych wyzwań, dostarczaniu innowacyjnych rozwiązań, które przewyższają oczekiwania."
+        "text": "DevOps Engineer ze specjalizacją w architekturach natywnych dla chmury, konteneryzacji i niezawodności systemów produkcyjnych. Doświadczony w budowaniu automatycznych rozwiązań monitorujących, implementacji przepływów GitOps i zapewnianiu niezawodności usług na dużą skalę. Solidne fundamenty w rozwoju oprogramowania ze skupieniem na infrastrukturze jako kodzie i doskonałości operacyjnej."
     },
     "Skills": {
         "title": "Umiejętności"
@@ -39,26 +39,46 @@
         "title": "Doświadczenie zawodowe",
         "jobs": {
             "heyHomie": {
-                "title": "HeyHomie - Next.js Developer",
-                "date": "Maj 2023 – Teraz",
+                "title": "HeyHomie - Infrastructure and SRE engineer",
+                "date": "Maj 2023 - Teraz",
                 "description": {
-                    "1": "Tworzenie nowych funkcjonalności i modyfikowanie już istniejących",
-                    "2": "Zarządzaj rozwojem front-endu, co obejmuje wyszukiwanie projektantów, dostosowywanie istniejących projektów i komunikację z programistami back-end"
+                    "1": "Zoptymalizowałem wydajność aplikacji, zmniejszając czasy ładowania o 60%",
+                    "2": "Wdrożyłem zautomatyzowane testowanie i potoki CI/CD dla usprawnionych wdrożeń bez przestojów",
+                    "3": "Osiągnąłem 99% czasu dostępności poprzez zautomatyzowane monitorowanie i potoki wdrażania",
+                    "4": "Uczestniczyłem w przeglądach kodu i rotacji on-call w celu zapewnienia jakości kodu, niezawodności systemu i szybkiego reagowania na incydenty"
                 },
                 "technologies": {
-                    "1": "Next.js",
-                    "2": "Tailwind",
+                    "1": "Kubernetes",
+                    "2": "ArgoCD",
                     "3": "Docker",
-                    "4": "Stripe"
+                    "4": "Helm",
+                    "5": "CI/CD"
+                }
+            },
+            "globalLogic": {
+                "title": "GlobalLogic - DevOps Engineer (COURSE PROJECT)",
+                "date": "Mar 2022 - Cze 2022",
+                "description": {
+                    "1": "Zaprojektowałem i wdrożyłem kompleksowy stos obserwacyjności przy użyciu Prometheus i Grafana dla zautomatyzowanych alertów i reagowania na incydenty",
+                    "2": "Zautomatyzowałem aprowizowanie infrastruktury używając zasad Infrastructure as Code, zmniejszając czas wdrażania o 40%",
+                    "3": "Wdrożyłem przepływy GitOps z FluxCD/ArgoCD dla niezawodnych, audytowalnych wdrożeń",
+                    "4": "Współpracowałem z członkami zespołu w celu wdrożenia najlepszych praktyk aranżacji kontenerów"
+                },
+                "technologies": {
+                    "1": "Technologie GitOps",
+                    "2": "Docker",
+                    "3": "Kubernetes",
+                    "4": "IaC",
+                    "5": "Obserwacyjność"
                 }
             },
             "myEventeo": {
                 "title": "MyEventeo - Internship Software Developer",
                 "date": "Lis 2022 - Gru 2022",
                 "description": {
-                    "1": "Zdobyte doświadczenie w pracy zespołowej",
-                    "2": "Zakończono wszelkie przygotowania i realizację projektu",
-                    "3": "Poznałem i wdrożyłem nowe technologie wymagane w tym projekcie, takie jak Firebase i Algolia"
+                    "1": "Pracowałem w zwinnym zespole programistów nad realizacją kamieni milowych projektu",
+                    "2": "Wdrożyłem komponenty infrastruktury przy użyciu Firebase i Algolia",
+                    "3": "Zdobyłem praktyczne doświadczenie w automatyzacji wdrażania i monitorowaniu"
                 },
                 "technologies": {
                     "1": "React",
@@ -73,53 +93,53 @@
     "Projects": {
         "title": "Projekty",
         "projects": {
-            "phanex": {
-                "title": "Phanex",
-                "description": "Przedstawiamy Phanex, Twoje ulubione miejsce, w którym znajdziesz najwyższej jakości akcesoria muzyczne. Koncentrując się na jakości i innowacjach, oferujemy wyselekcjonowany wybór słuchawek i głośników.",
+            "heyhomie-helm": {
+                "title": "heyhomie-helm",
+                "description": "To repozytorium centralizuje wykresy Helm do wdrażania i zarządzania różnymi usługami, które tworzą aplikację HeyHomie. Stos obejmuje wiele frontendu, backendu i komponentów infrastruktury wdrożonych w Kubernetes z zasadami GitOps.",
                 "technologies": {
-                    "1": "Next.js",
-                    "2": "Stripe",
-                    "3": "Sanity",
-                    "4": "Canvas-confetti"
+                    "1": "Helm",
+                    "2": "Bash",
+                    "3": "Kubernetes",
+                    "4": "ArgoCD",
+                    "5": "Traefik"
                 },
                 "links": {
-                    "github": "https://github.com/vladyslavPlaksa/ecommerce_app",
-                    "site": "http://ecommerce-app-eta.vercel.app/"
+                    "github": "https://github.com/vladyslavPlaksa/heyhomie-helm",
+                    "site": "http://heyhomie.io"
                 }
             },
-            "graphCML": {
-                "title": "GraphCML",
-                "description": "Przedstawiamy blog GraphCML, najważniejsze miejsce, w którym znajdziesz wnikliwe treści i wciągające lektury. Zapewniamy płynne przeglądanie dzięki szybko ładującym się stronom. Bądź na bieżąco z najnowszymi postami dzięki aktualizacjom w czasie rzeczywistym i intuicyjnej nawigacji.",
+            "portfolio": {
+                "title": "Portfolio",
+                "description": "Nowoczesna, w pełni responsywna strona portfolio zbudowana z Next.js, TypeScript i Tailwind CSS. Zawiera obsługę motywu ciemnego/jasnego, lokalizację wielojęzyczną (EN/PL) i płynne animacje.",
                 "technologies": {
                     "1": "Next.js",
-                    "2": "Graphql",
-                    "3": "Moment",
-                    "4": "Sass"
+                    "2": "TypeScript",
+                    "3": "Docker"
                 },
                 "links": {
-                    "github": "https://github.com/vladyslavPlaksa/blog_app",
-                    "site": "http://blog-app-eosin-zeta.vercel.app/"
+                    "github": "https://github.com/vladyslavPlaksa/portfolio",
+                    "site": "#"
                 }
             }
         }
     },
     "Contact": {
-        "title": "Skontaktu zemną",
+        "title": "Skontaktuj się ze mną",
         "links": {
             "github": {
-                "title": "Idź do mojego GitHub",
+                "title": "Przejdź do mojego GitHub",
                 "href": "https://github.com/vladyslavPlaksa",
                 "alt": "GitHub"
             },
             "linkedin": {
-                "title": "Idź do mojego LinkedIn",
+                "title": "Przejdź do mojego LinkedIn",
                 "href": "https://www.linkedin.com/in/vladyslav-plaksa-071b20238/",
                 "alt": "LinkedIn"
             },
             "email": {
-                "title": "Napisz do mnie e-mail",
+                "title": "Wyślij mi e-mail",
                 "href": "mailto:vladyslavplaksa@gmail.com",
-                "alt": "Email me",
+                "alt": "Wyślij e-mail",
                 "icon": "envelope"
             }
         }

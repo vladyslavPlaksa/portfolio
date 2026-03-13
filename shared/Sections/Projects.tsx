@@ -9,26 +9,22 @@ export default function Projects() {
 
     const projectsConfig = [
         {
-            title: t('projects.phanex.title'),
-            description: t('projects.phanex.description'),
+            title: t('projects.heyhomie-helm.title'),
+            description: t('projects.heyhomie-helm.description'),
             technologies: [
-                t('projects.phanex.technologies.1'),
-                t('projects.phanex.technologies.2'),
-                t('projects.phanex.technologies.3'),
-                t('projects.phanex.technologies.4'),
+                t('projects.heyhomie-helm.technologies.1'),
+                t('projects.heyhomie-helm.technologies.2'),
+                t('projects.heyhomie-helm.technologies.3'),
+                t('projects.heyhomie-helm.technologies.4'),
+                t('projects.heyhomie-helm.technologies.5'),
             ],
-            links: { github: t('projects.phanex.links.github'), site: t('projects.phanex.links.site') },
+            links: { github: t('projects.heyhomie-helm.links.github'), site: t('projects.heyhomie-helm.links.site') },
         },
         {
-            title: t('projects.graphCML.title'),
-            description: t('projects.graphCML.description'),
-            technologies: [
-                t('projects.graphCML.technologies.1'),
-                t('projects.graphCML.technologies.2'),
-                t('projects.graphCML.technologies.3'),
-                t('projects.graphCML.technologies.4'),
-            ],
-            links: { github: t('projects.graphCML.links.github'), site: t('projects.graphCML.links.site') },
+            title: t('projects.portfolio.title'),
+            description: t('projects.portfolio.description'),
+            technologies: [t('projects.portfolio.technologies.1'), t('projects.portfolio.technologies.2'), t('projects.portfolio.technologies.3')],
+            links: { github: t('projects.portfolio.links.github'), site: t('projects.portfolio.links.site') },
         },
     ];
 
@@ -51,7 +47,7 @@ export default function Projects() {
                                 </Link>
                             </span>
                         </div>
-                        <div className='flex h-full flex-col justify-between'>
+                        <div className='flex h-full flex-col'>
                             <p className='py-3 pl-4 text-lg'>{project.description}</p>
                             <div className='flex flex-wrap gap-2 py-3 pl-4'>
                                 {project.technologies.map(tech => (

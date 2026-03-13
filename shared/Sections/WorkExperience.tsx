@@ -9,12 +9,30 @@ export default function WorkExperience() {
         {
             title: t('jobs.heyHomie.title'),
             date: t('jobs.heyHomie.date'),
-            description: [t('jobs.heyHomie.description.1'), t('jobs.heyHomie.description.2')],
+            description: [
+                t('jobs.heyHomie.description.1'),
+                t('jobs.heyHomie.description.2'),
+                t('jobs.heyHomie.description.3'),
+                t('jobs.heyHomie.description.4'),
+            ],
             technologies: [
                 t('jobs.heyHomie.technologies.1'),
                 t('jobs.heyHomie.technologies.2'),
                 t('jobs.heyHomie.technologies.3'),
                 t('jobs.heyHomie.technologies.4'),
+                t('jobs.heyHomie.technologies.5'),
+            ],
+        },
+        {
+            title: t('jobs.globalLogic.title'),
+            date: t('jobs.globalLogic.date'),
+            description: [t('jobs.globalLogic.description.1'), t('jobs.globalLogic.description.2'), t('jobs.globalLogic.description.3')],
+            technologies: [
+                t('jobs.globalLogic.technologies.1'),
+                t('jobs.globalLogic.technologies.2'),
+                t('jobs.globalLogic.technologies.3'),
+                t('jobs.globalLogic.technologies.4'),
+                t('jobs.globalLogic.technologies.5'),
             ],
         },
         {
