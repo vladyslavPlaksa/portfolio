@@ -26,11 +26,11 @@
     },
     "Hero": {
         "title": "Hello",
-        "subtitle": "I'm Vladyslav and I'm a software developer"
+        "subtitle": "I'm Vladyslav and I'm a DevOps Engineer"
     },
     "About": {
         "title": "About me",
-        "text": "I am a dedicated and driven software engineer, I specialize in a range of technologies. With a fervent passion for technology and a relentless pursuit of excellence, I consistently strive to expand my programming prowess and stay at the forefront of industry trends. My journey in software development is characterized by a strong work ethic, exceptional communication skills, and an unwavering commitment to success. Equipped with an innate ability to adapt to new challenges, delivering innovative solutions that exceed expectations."
+        "text": "DevOps Engineer with expertise in cloud-native architectures, containerization, and production system reliability. Experienced in building automated monitoring solutions, implementing GitOps workflows, and ensuring service reliability at scale. Strong foundation in software development with focus on infrastructure as code and operational excellence."
     },
     "Skills": {
         "title": "Skills"
@@ -39,26 +39,46 @@
         "title": "Work Experience",
         "jobs": {
             "heyHomie": {
-                "title": "HeyHomie - Next.js Developer",
+                "title": "HeyHomie - Infrastructure and SRE engineer",
                 "date": "May 2023 - Now",
                 "description": {
-                    "1": "Developing new features and modifying existing one",
-                    "2": "Manage front-end development, which includes finding designers, adjusting existing designs, and communicating with back-end developers"
+                    "1": "Optimized application performance, reducing load times by 60%",
+                    "2": "Implemented automated testing and CI/CD pipelines for streamlined deployment with zero-downtime releases",
+                    "3": "Achieved 99% uptime through automated monitoring and deployment pipelines",
+                    "4": "Participated in code reviews and on-call rotation to ensure code quality, system reliability, and rapid incident response"
                 },
                 "technologies": {
-                    "1": "Next.js",
-                    "2": "Tailwind",
+                    "1": "Kubernetes",
+                    "2": "ArgoCD",
                     "3": "Docker",
-                    "4": "Stripe"
+                    "4": "Helm",
+                    "5": "CI/CD"
+                }
+            },
+            "globalLogic": {
+                "title": "GlobalLogic - DevOps Engineer (COURSE PROJECT)",
+                "date": "Mar 2022 - Jun 2022",
+                "description": {
+                    "1": "Designed and implemented a comprehensive observability stack using Prometheus and Grafana for automated alerting and incident response",
+                    "2": "Automated infrastructure provisioning using Infrastructure as Code principles, reducing deployment time by 40%",
+                    "3": "Implemented GitOps workflows with FluxCD/ArgoCD for reliable, auditable deployments",
+                    "4": "Collaborated with team members to implement best practices for container orchestration"
+                },
+                "technologies": {
+                    "1": "GitOps technologies",
+                    "2": "Docker",
+                    "3": "Kubernetes",
+                    "4": "IaC",
+                    "5": "Observability"
                 }
             },
             "myEventeo": {
                 "title": "MyEventeo - Internship Software Developer",
                 "date": "Nov 2022 - Dec 2022",
                 "description": {
-                    "1": "Gained teamwork experience",
-                    "2": "Completed all preparation and implementation of the project",
-                    "3": "Learned and implemented new technologies required by this project such as Firebase and Algola"
+                    "1": "Worked within an agile development team to deliver project milestones",
+                    "2": "Implemented infrastructure components using Firebase and Algolia",
+                    "3": "Gained hands-on experience with deployment automation and monitoring"
                 },
                 "technologies": {
                     "1": "React",
@@ -73,32 +93,32 @@
     "Projects": {
         "title": "Projects",
         "projects": {
-            "phanex": {
-                "title": "Phanex",
-                "description": "Introducing Phanex, your go-to destination for premium musical accessories. With a focus on quality and innovation, we offer a curated selection of headphones and speakers",
+            "heyhomie-helm": {
+                "title": "heyhomie-helm",
+                "description": "This repository centralizes Helm charts for deploying and managing the various services that make up the HeyHomie application. The stack includes multiple frontends, backends, and infrastructure components deployed on Kubernetes with GitOps principles.",
                 "technologies": {
-                    "1": "Next.js",
-                    "2": "Stripe",
-                    "3": "Sanity",
-                    "4": "Canvas-confetti"
+                    "1": "Helm",
+                    "2": "Bash",
+                    "3": "Kubernetes",
+                    "4": "ArgoCD",
+                    "5": "Traefik"
                 },
                 "links": {
-                    "github": "https://github.com/vladyslavPlaksa/ecommerce_app",
-                    "site": "http://ecommerce-app-eta.vercel.app/"
+                    "github": "https://github.com/vladyslavPlaksa/heyhomie-helm",
+                    "site": "http://heyhomie.io"
                 }
             },
-            "graphCML": {
-                "title": "GraphCML",
-                "description": "Introducing GraphCML Blog, your premier destination for insightful content and engaging reads. We deliver a seamless browsing experience with fast-loading pages. Stay up-to-date with the latest posts thanks to real-time updates and intuitive navigation.",
+            "portfolio": {
+                "title": "Portfolio",
+                "description": "A modern, fully-responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS. Features dark/light theme support, multi-language localization (EN/PL), and smooth animations.",
                 "technologies": {
                     "1": "Next.js",
-                    "2": "Graphql",
-                    "3": "Moment",
-                    "4": "Sass"
+                    "2": "TypeScript",
+                    "3": "Docker"
                 },
                 "links": {
-                    "github": "https://github.com/vladyslavPlaksa/blog_app",
-                    "site": "http://blog-app-eosin-zeta.vercel.app/"
+                    "github": "https://github.com/vladyslavPlaksa/portfolio",
+                    "site": "#"
                 }
             }
         }
