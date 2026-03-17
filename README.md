@@ -1,34 +1,33 @@
 # 💼 Vladyslav Plaksa's Portfolio
 
-A modern, fully-responsive portfolio website built with **Next.js 14**, **TypeScript**, and **Tailwind CSS**. Features dark/light theme support, multi-language localization (EN/PL), and smooth animations.
+A modern, fully-responsive portfolio website built with **Next.js**, **TypeScript**, and **Tailwind CSS**. Features dark/light theme support, multi-language localization (EN/PL), and smooth animations.
 
 ## 🌐 Live Demo
 
-Visit the live portfolio: [Portfolio](https://vladyslavplaksa.org/)
+Visit the live portfolio: [vladyslavplaksa.org](https://vladyslavplaksa.org/)
 
 ## ✨ Key Features
 
-- 🎨 **Dark/Light Theme** - Toggle between themes with system preference detection
-- 🌍 **Multi-Language** - English and Polish localization with `next-intl`
-- 📱 **Fully Responsive** - Mobile-first design that works on all devices
-- ⚡ **Fast Performance** - Next.js 14 with image optimization and lazy loading
-- 🔤 **TypeScript** - Full type safety across the application
-- 🎯 **Smooth Scrolling** - Elegant navigation between sections
-- ♿ **Accessible** - WCAG compliant with semantic HTML
-- 🚀 **SEO Optimized** - Meta tags, structured data, and proper headings
-- 🐳 **Docker Ready** - Containerized development environment included
-- 📦 **Modern Stack** - Latest tools and best practices
+- 🎨 **Dark/Light Theme** — Toggle between themes with system preference detection via `next-themes`
+- 🌍 **Multi-Language** — English and Polish localization with `next-intl`
+- 📱 **Fully Responsive** — Mobile-first design with hamburger menu for small screens
+- ⚡ **Fast Performance** — Next.js with image optimization and lazy loading
+- 🔤 **TypeScript** — Full type safety across the application
+- 🎯 **Smooth Scrolling** — Elegant navigation between sections
+- ♿ **Accessible** — WCAG-compliant with semantic HTML
+- 🚀 **SEO Optimized** — Meta tags and proper heading hierarchy
+- 🐳 **Docker Ready** — Containerized development environment included
 
 ## 🛠 Tech Stack
 
 | Category | Technologies |
 |----------|--------------|
-| **Framework** | Next.js 14.1.0, React 18 |
-| **Styling** | Tailwind CSS 3.3.0, PostCSS |
-| **Language** | TypeScript 5 |
-| **Internationalization** | next-intl 3.9.0 |
-| **Theme Management** | next-themes 0.2.1 |
-| **Code Quality** | ESLint 8, Prettier 3.2.5 |
+| **Framework** | Next.js ^16.1.7, React ^19.2.4 |
+| **Styling** | Tailwind CSS ^3.3.0, PostCSS |
+| **Language** | TypeScript ^5 |
+| **Internationalization** | next-intl ^4.8.3 |
+| **Theme Management** | next-themes ^0.2.1 |
+| **Code Quality** | ESLint ^9, Prettier ^3.2.5 |
 | **Containerization** | Docker, Docker Compose |
 
 ## 📋 Prerequisites
@@ -63,371 +62,158 @@ Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 ## 📦 Available Scripts
 
 ```bash
-# Development
-npm run dev         # Start development server with hot reload
-
-# Production
-npm run build       # Build for production
-npm start          # Start production server
-
-# Code Quality
-npm run lint       # Run ESLint checks
+npm run dev     # Start development server with hot reload
+npm run build   # Build for production
+npm start       # Start production server on port 3000
+npm run lint    # Run ESLint checks
 ```
 
 ## 🐳 Docker Setup
-
-### Development with Docker
 
 ```bash
 docker-compose -f docker-compose.dev.yml up --build
 ```
 
-The application will be available at `http://localhost:3000`
+The application will be available at `http://localhost:3000`.
 
-**Environment File** (`.env.dev`):
+**Required environment file** (`.env.dev`):
 ```env
 NEXT_PUBLIC_NODE_ENV=development
 ```
+
+> The entrypoint script cleans caches, installs dependencies, and starts the app in the mode matching `NEXT_PUBLIC_NODE_ENV`.
 
 ## 📂 Project Structure
 
 ```
 portfolio/
 ├── pages/
-│   ├── _app.tsx                    # App wrapper with Theme & i18n providers
-│   ├── _document.tsx               # Document with global styles
-│   ├── index.tsx                   # Home page with all sections
-│   └── api/
-│       └── hello.ts                # Example API route
+│   ├── _app.tsx              # ThemeProvider & NextIntlClientProvider wrappers
+│   ├── _document.tsx         # HTML shell, Google Fonts (Michroma), hydration suppression
+│   └── index.tsx             # Home page — assembles all sections, getStaticProps for i18n
 │
 ├── shared/
 │   ├── Sections/
-│   │   ├── About.tsx              # About me section
-│   │   ├── Contact.tsx            # Contact links section
-│   │   ├── Footer.tsx             # Footer with credits
-│   │   ├── HeroSection.tsx        # Hero with title & subtitle
-│   │   ├── Projects.tsx           # Projects showcase (Phanex, GraphCML)
-│   │   ├── Skills.tsx             # Technical skills list
-│   │   └── WorkExperience.tsx     # Work history (HeyHomie, MyEventeo)
+│   │   ├── About.tsx         # About me section
+│   │   ├── Contact.tsx       # GitHub, LinkedIn, email links with theme-aware icons
+│   │   ├── Footer.tsx        # Footer with dynamic year, credits
+│   │   ├── HeroSection.tsx   # Large title & subtitle
+│   │   ├── Projects.tsx      # Project cards (heyhomie-helm, portfolio)
+│   │   ├── Skills.tsx        # Tech skill tags (static config array)
+│   │   └── WorkExperience.tsx# Work history (HeyHomie, GlobalLogic, MyEventeo)
 │   │
 │   ├── Topnav/
-│   │   ├── Topnav.tsx             # Main navigation with mobile menu
-│   │   ├── ThemeSwitch.tsx        # Dark/light mode toggle
-│   │   └── LocaleSwitch.tsx       # Language switcher
+│   │   ├── Topnav.tsx        # Nav with mobile hamburger menu & sticky open state
+│   │   ├── ThemeSwitch.tsx   # Sun/moon toggle (desktop & mobile variants)
+│   │   └── LocaleSwitch.tsx  # Globe icon — toggles EN ↔ PL
 │   │
 │   └── utils/
-│       ├── Button.tsx             # Reusable button component
-│       └── ScrollToTop.tsx        # Scroll to top floating button
+│       ├── Button.tsx        # Reusable tag/badge component
+│       └── ScrollToTop.tsx   # Fixed floating scroll-to-top button
 │
 ├── utils/
-│   ├── changeLocale.ts            # Language switching logic
-│   └── smoothScrollTo.ts          # Smooth scroll navigation
-│
-├── styles/
-│   └── globals.css                # Global Tailwind & custom styles
-│
-├── public/
-│   ├── icons/                     # SVG icons (light & dark variants)
-│   │   ├── github.svg / github_dark.svg
-│   │   ├── linkedin.svg / linkedin_dark.svg
-│   │   ├── envelope.svg / envelope_dark.svg
-│   │   ├── globe.svg / globe_dark.svg
-│   │   ├── sun.svg / sun_dark.svg
-│   │   ├── moon.svg / moon_dark.svg
-│   │   ├── menu.svg / menu_dark.svg
-│   │   ├── scroll_to_top.svg / scroll_to_top_dark.svg
-│   │   └── link.svg / link_dark.svg
-│   │
-│   └── background.svg             # Animated gradient background
+│   ├── changeLocale.ts       # Switches router locale between 'en' and 'pl'
+│   └── smoothScrollTo.ts     # Calls scrollIntoView({ behavior: 'smooth' })
 │
 ├── messages/
-│   ├── en.json                    # English translations
-│   └── pl.json                    # Polish translations
+│   ├── en.json               # English translations
+│   └── pl.json               # Polish translations
 │
-├── Configuration Files
-│   ├── next.config.mjs            # Next.js config with i18n
-│   ├── tailwind.config.ts         # Tailwind theme customization
-│   ├── tsconfig.json              # TypeScript configuration
-│   ├── .eslintrc.js               # ESLint rules
-│   ├── .prettierrc                # Code formatting rules
-│   ├── postcss.config.js          # PostCSS configuration
-│   └── package.json               # Dependencies & scripts
+├── styles/
+│   └── globals.css           # Tailwind directives + .link underline animation
 │
-├── Docker Files
-│   ├── Dockerfile                 # Multi-stage Docker build
-│   └── docker-compose.dev.yml     # Development Docker Compose
+├── public/
+│   ├── icons/                # SVG icons (light & dark variants per icon)
+│   ├── logo.png              # Light-mode logo
+│   ├── logo_dark.png         # Dark-mode logo / favicon
+│   └── background.svg        # Decorative gradient background (used twice, rotated)
 │
-├── README.md                      # This file
-├── LICENSE                        # MIT License
-└── .gitignore                     # Git ignore rules
+├── next.config.mjs           # i18n config: locales ['pl', 'en'], defaultLocale 'en'
+├── tailwind.config.ts        # Custom colors, Michroma font, darkMode: 'selector'
+├── tsconfig.json             # Strict mode, path alias @/* → ./*
+├── .eslintrc.js              # ESLint with TypeScript, React, a11y, import-order rules
+├── .prettierrc               # 4-space indent, single quotes, 160 char width, Tailwind plugin
+├── Dockerfile                # Node base image, www user, /app workdir
+├── docker-compose.dev.yml    # Mounts repo to /app, exposes port 3000, loads .env.dev
+└── entrypoint.sh             # Cleans build artifacts, npm install, dev or prod start
 ```
 
-## 🎨 Customization Guide
+## 🎨 Customization
 
-### Updating Content
+### Text Content
 
-All text content is managed through translation files for easy localization:
+All copy lives in the translation files. Edit `messages/en.json` for English and `messages/pl.json` for Polish. Every section (Hero, About, Skills titles, Work, Projects, Contact) is driven by these files.
 
-**Edit `messages/en.json` for English content:**
-```json
-{
-  "Hero": {
-    "title": "Hello",
-    "subtitle": "I'm Vladyslav and I'm a software developer"
-  }
-}
-```
-
-**Edit `messages/pl.json` for Polish content**
-
-### Adding Projects
-
-Update the `Projects` section in `messages/en.json` and `messages/pl.json`:
-
-```json
-{
-  "Projects": {
-    "projects": {
-      "projectName": {
-        "title": "Project Title",
-        "description": "Project description",
-        "technologies": {
-          "1": "Tech1",
-          "2": "Tech2"
-        },
-        "links": {
-          "github": "https://github.com/...",
-          "site": "https://example.com"
-        }
-      }
-    }
-  }
-}
-```
-
-### Updating Skills
+### Skills
 
 Edit the `skillsConfig` array in `shared/Sections/Skills.tsx`:
 
 ```typescript
 const skillsConfig = [
   { name: 'New Skill' },
-  // ... more skills
+  // ...
 ];
 ```
 
-### Customizing Colors
+### Projects
 
-Modify the color palette in `tailwind.config.ts`:
+Add a new entry under `"projects"` in both `messages/en.json` and `messages/pl.json`, then add a corresponding item to `projectsConfig` in `shared/Sections/Projects.tsx`.
 
-```typescript
-colors: {
-  primary: {
-    100: '#F2F2F2',  // Light background
-    900: '#1F1F1F',  // Dark background
-  },
-  secondary: {
-    green: '#09C627',
-    pink: '#BF1DC2',
-  },
-  tertiary: '#0F0905',
-}
-```
+### Colors & Fonts
 
-### Changing Fonts
+The full color palette and `Michroma` font are configured in `tailwind.config.ts`. Dark mode uses the `selector` strategy (toggled via a `class` attribute on `<html>`).
 
-1. Update font imports in `pages/_document.tsx`:
-```typescript
-<link href='https://fonts.googleapis.com/css2?family=YourFont&display=swap' rel='stylesheet' />
-```
+## 🌐 Adding a New Language
 
-2. Update `tailwind.config.ts`:
-```typescript
-fontFamily: {
-  yourFont: ['Your Font', 'Fallback'],
-}
-```
-
-3. Use in components:
-```typescript
-<h1 className='font-yourFont'>Text</h1>
-```
-
-## 🌐 Multi-Language Support
-
-The project uses `next-intl` for internationalization. To add a new language:
-
-1. Create `messages/[lang].json` with all translations
-2. Update `next.config.mjs`:
-```typescript
+1. Create `messages/[lang].json` with all keys matching `en.json`
+2. Add the locale code to `next.config.mjs`:
+```js
 i18n: {
-  locales: ['en', 'pl', 'de'],  // Add new language code
+  locales: ['en', 'pl', 'de'],
   defaultLocale: 'en',
 }
 ```
-
-3. Update `shared/Topnav/LocaleSwitch.tsx` if needed
-
-## 🎯 Features Deep Dive
-
-### Dark/Light Theme
-- Powered by `next-themes`
-- Persists user preference in localStorage
-- Respects system preference on first visit
-- Uses CSS selector strategy for dark mode
-
-### Smooth Scrolling
-Navigation links use the `smoothScroll` utility for elegant scroll behavior:
-```typescript
-const smoothScroll = (target: string, event: React.MouseEvent) => {
-  event.preventDefault();
-  document.querySelector(target)?.scrollIntoView({ behavior: 'smooth' });
-};
-```
-
-### Responsive Design
-- Mobile-first approach
-- Breakpoints: `sm` (640px), `md` (768px), `lg` (1024px)
-- Images use Next.js `Image` component with responsive sizes
-
-### Type Safety
-Full TypeScript configuration ensures type safety:
-- Strict mode enabled
-- No unused variables or parameters
-- Proper module resolution
-
-## 📱 Browser Support
-
-| Browser | Version |
-|---------|---------|
-| Chrome | Latest |
-| Firefox | Latest |
-| Safari | Latest |
-| Edge | Latest |
-| Mobile (iOS Safari, Chrome) | Latest |
+3. Update the toggle logic in `utils/changeLocale.ts` if cycling through more than two locales
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+Vercel is the recommended host — it auto-detects Next.js and requires no additional configuration beyond pushing to GitHub.
 
-Vercel is the optimal platform for Next.js applications:
-
-1. Push your code to GitHub
-2. Import repository at [vercel.com](https://vercel.com)
-3. Vercel auto-detects Next.js configuration
-4. Deploy with one click
-
-**Environment Variables** (if needed):
+**Environment variable for production:**
 ```
 NEXT_PUBLIC_NODE_ENV=production
 ```
 
-## 🔧 Code Quality
-
-### ESLint Configuration
-The project uses strict ESLint rules for:
-- TypeScript best practices
-- React hooks validation
-- Proper import ordering
-- Accessibility compliance
-
-Check `.eslintrc.js` for detailed rules.
-
-### Prettier Formatting
-Automatic code formatting with:
-- 4-space indentation
-- Single quotes
-- 160 character line width
-- Tailwind CSS class sorting
-
-Run formatting:
-```bash
-npm run lint
-```
-
-## 📊 Performance Optimizations
-
-- **Image Optimization** - Next.js Image component with responsive sizes
-- **Code Splitting** - Automatic with Next.js
-- **CSS-in-JS** - Tailwind CSS for minimal bundle
-- **Font Loading** - Google Fonts with `display=swap`
-- **Lazy Loading** - Components load on demand
-
 ## 🐛 Troubleshooting
 
-### Port 3000 Already in Use
+**Port 3000 in use:**
 ```bash
-# Find and kill the process
 lsof -ti:3000 | xargs kill -9
-
-# Or use a different port
-npm run dev -- -p 3001
 ```
 
-### Dependencies Issues
+**Dependency issues:**
 ```bash
-# Clear cache and reinstall
-rm -rf node_modules package-lock.json
-npm install
+rm -rf node_modules package-lock.json && npm install
 ```
 
-### Docker Issues
+**Docker — force clean rebuild:**
 ```bash
-# Rebuild with no cache
 docker-compose -f docker-compose.dev.yml up --build --no-cache
 ```
 
-### Theme Not Persisting
-Clear browser cache and localStorage, then refresh the page.
-
-### Translations Not Showing
-Ensure the locale folder exists in your router and JSON is valid.
-
-## 📈 Future Enhancements
-
-- [ ] Blog section with dynamic posts
-- [ ] Contact form with email integration
-- [ ] Analytics integration
-- [ ] Testimonials section
-- [ ] Case studies for projects
-- [ ] Email newsletter signup
-- [ ] Social media feeds
-- [ ] Performance metrics dashboard
-
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-Copyright (c) 2026 Vladyslav Plaksa
-```
+MIT License — see [LICENSE](LICENSE) for details.
 
 ## 👤 Author
 
 **Vladyslav Plaksa**
-- 💻 GitHub: [@vladyslavPlaksa](https://github.com/vladyslavPlaksa)
-- 🔗 LinkedIn: [Vladyslav Plaksa](https://www.linkedin.com/in/vladyslav-plaksa-071b20238/)
-- 📧 Email: vladyslavplaksa@gmail.com
+- GitHub: [@vladyslavPlaksa](https://github.com/vladyslavPlaksa)
+- LinkedIn: [Vladyslav Plaksa](https://www.linkedin.com/in/vladyslav-plaksa-071b20238/)
+- Email: vladyslavplaksa@gmail.com
 
-**Design**
-- 🎨 Designer: Liza Tkachenko
-
-## 🙏 Acknowledgments
-
-- [Next.js](https://nextjs.org/) - The React framework
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [TypeScript](https://www.typescriptlang.org/) - Typed JavaScript
-- [next-intl](https://next-intl-docs.vercel.app/) - Internationalization
-- [next-themes](https://github.com/pacocoursey/next-themes) - Theme management
-- [Vercel](https://vercel.com) - Hosting & deployment
-
-## 📞 Support & Feedback
-
-Found a bug or have a suggestion? Open an issue on [GitHub Issues](https://github.com/vladyslavPlaksa/portfolio/issues).
+**Design:** Liza Tkachenko
 
 ---
 
-**Made with ❤️ and ☕ by Vladyslav Plaksa**
-
-Last Updated: March 2026
+*Made with ❤️ and ☕ by Vladyslav Plaksa — Last updated March 20
